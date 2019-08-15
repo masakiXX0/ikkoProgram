@@ -1,6 +1,6 @@
 class CustomQueue:
     """カスタムキュークラス"""
-    
+
     def __init__(self, maxsize):
         self.queue = [] #FIFO
         self.maxsize = maxsize
@@ -25,9 +25,7 @@ class CustomQueue:
 
     def full(self):
         """キューが最大サイズに達している."""
-        if len(self.queue) == self.maxsize:
-            return True
-        return False
+        return len(self.queue) == self.maxsize
 
 
     def join_queue_string(self):
