@@ -1,10 +1,12 @@
 import random
 from customQueue import CustomQueue
 
+
 ikkoList = ["ど", "ん", "だ", "け"]
 
-# メイン
+
 def main():
+    """メイン関数"""
     queue = CustomQueue(4)
     counter = 0
 
@@ -19,9 +21,11 @@ def main():
                 print("出力 : " + str(counter) + "回")
                 return
 
-# ikkoListからランダムに文字を取得
+
 def getRandomAtChar():
+    """ikkoListからランダムに文字を取得"""
     return ikkoList[random.randint(0, 3)]
+
 
 if __name__ == "__main__":
     main()

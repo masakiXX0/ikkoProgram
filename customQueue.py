@@ -1,24 +1,35 @@
 class CustomQueue:
+    """カスタムキュークラス"""
+    
     def __init__(self, maxsize):
         self.queue = [] #FIFO
         self.maxsize = maxsize
 
-    # エンキュー
+
     def enqueue(self, item):
+        """キューの末尾に要素を追加.
+        キューが最大サイズに達しているときは、デキューした後、エンキューする.
+        """
+        dequeue_item = ""
         if self.full():
-            self.dequeue()        
+            dequeue_item = self.dequeue()        
         self.queue.append(item)
 
-    # デキュー
+        return dequeue_item
+
+
     def dequeue(self):
+        """キューの先頭の要素を取得&削除."""
         return self.queue.pop(0)
 
-    # キューがいっぱい
+
     def full(self):
+        """キューが最大サイズに達している."""
         if len(self.queue) == self.maxsize:
             return True
         return False
-    
-    # キュー内の文字を連結
+
+
     def join_queue_string(self):
+        """キュー内の文字を連結."""
         return "".join(self.queue)
