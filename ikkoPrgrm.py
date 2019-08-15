@@ -2,7 +2,8 @@ import random
 from customQueue import CustomQueue
 
 
-ikkoList = ["ど", "ん", "だ", "け"]
+IKKO_LIST = ["ど", "ん", "だ", "け"]
+
 
 
 def main():
@@ -23,8 +24,8 @@ def main():
 
 
 def getRandomAtChar():
-    """ikkoListからランダムに文字を取得"""
-    return ikkoList[random.randint(0, 3)]
+    """IKKO_LISTからランダムに文字を取得"""
+    return IKKO_LIST[random.randint(0, 3)]
 
 
 if __name__ == "__main__":
