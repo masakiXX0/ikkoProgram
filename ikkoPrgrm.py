@@ -1,5 +1,7 @@
 import random
+from customQueue import CustomQueue
 
+queue = CustomQueue(4)
 ikkoList = ["ど", "ん", "だ", "け"]
 
 def main():
