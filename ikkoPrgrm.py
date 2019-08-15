@@ -1,18 +1,27 @@
 import random
 from customQueue import CustomQueue
 
-queue = CustomQueue(4)
 ikkoList = ["ど", "ん", "だ", "け"]
 
+# メイン
 def main():
-    num = 0
-    while num < 10:
-        getRandomAtChar()
-        num += 1
+    queue = CustomQueue(4)
+    counter = 0
 
+    while True:
+        char = getRandomAtChar()
+        queue.enqueue(char)
+        print(char)
+        counter+=1
+
+        if queue.join_queue_string() == "どんだけ":
+                print("どんだけ～！")
+                print("出力 : " + str(counter) + "回")
+                return
+
+# ikkoListからランダムに文字を取得
 def getRandomAtChar():
-    num = random.randint(0, 3)
-    print(ikkoList[num])
+    return ikkoList[random.randint(0, 3)]
 
 if __name__ == "__main__":
     main()
