@@ -3,7 +3,7 @@ from customQueue import CustomQueue
 
 
 IKKO_LIST = ["ど", "ん", "だ", "け"]
-
+CHEKC_STRING = "".join(IKKO_LIST)
 
 def main():
     """メイン関数"""
@@ -16,7 +16,7 @@ def main():
         print(char)
         counter+=1
 
-        if queue.join_queue_string() == "どんだけ":
+        if queue.join_queue_string() == CHEKC_STRING:
                 print("どんだけ～！")
                 print("出力 : " + str(counter) + "回")
                 return
