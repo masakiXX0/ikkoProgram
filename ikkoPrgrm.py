@@ -5,14 +5,13 @@ from customQueue import CustomQueue
 IKKO_LIST = ["ど", "ん", "だ", "け"]
 
 
-
 def main():
     """メイン関数"""
     queue = CustomQueue(4)
     counter = 0
 
     while True:
-        char = getRandomAtChar()
+        char = get_random_atchar()
         queue.enqueue(char)
         print(char)
         counter+=1
@@ -23,7 +22,7 @@ def main():
                 return
 
 
-def getRandomAtChar():
+def get_random_atchar():
     """IKKO_LISTからランダムに文字を取得"""
     return IKKO_LIST[random.randint(0, 3)]
 
