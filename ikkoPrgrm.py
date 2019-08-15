@@ -5,6 +5,7 @@ from customQueue import CustomQueue
 IKKO_LIST = ["ど", "ん", "だ", "け"]
 CHEKC_STRING = "".join(IKKO_LIST)
 
+
 def main():
     """メイン関数"""
     queue = CustomQueue(4)
@@ -12,8 +13,9 @@ def main():
 
     while True:
         char = get_random_atchar()
-        queue.enqueue(char)
         print(char)
+        
+        queue.enqueue(char)
         counter+=1
 
         if queue.join_queue_string() == CHEKC_STRING:
