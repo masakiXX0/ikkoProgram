@@ -1,5 +1,4 @@
-from queue import Queue
-
-class CustomQueue(Queue):
+class CustomQueue:
     def __init__(self, maxsize):
-        super().__init__(maxsize)
+        self.queue = [] #FIFO
+        self.maxsize = maxsize
